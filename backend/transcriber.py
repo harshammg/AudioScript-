@@ -1,8 +1,8 @@
 from faster_whisper import WhisperModel
 import os
 
-# Use 'base' model for a balance of speed and accuracy. 
-MODEL_SIZE = "base"
+# Use 'tiny' model for Cloud Free Tier (Render/Railway) to prevent timeouts/OOM.
+MODEL_SIZE = "tiny"
 # Run on CPU with INT8 by default to be safe for most local machines.
 DEVICE = "cpu" 
 COMPUTE_TYPE = "int8"
