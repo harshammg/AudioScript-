@@ -164,6 +164,21 @@ We love contributions! If you know code:
 5.  Push: `git push origin my-new-feature`
 6.  Open a **Pull Request** on GitHub.
 
+## ☁️ Deployment
+
+### Frontend (Vercel)
+You can deploy the Frontend to [Vercel](https://vercel.com) easily:
+1.  Push this repo to GitHub.
+2.  Import the project in Vercel.
+3.  Select the `frontend` directory as the **Root Directory**.
+4.  Vercel will auto-detect Vite and deploy it.
+
+**Note**: Since the Backend runs locally, the deployed frontend will still connect to your `localhost:8001` server. This enables a "Cloud UI, Local Privacy" architecture.
+
+### Backend
+The backend utilizes `faster-whisper` and requires GPU/CPU resources and `ffmpeg`. It is **not recommended** to deploy this on serverless platforms like Vercel.
+Keep running the backend locally for usage.
+
 ## 📄 License
 
 MIT License - You are free to use, modify, and distribute this software.
