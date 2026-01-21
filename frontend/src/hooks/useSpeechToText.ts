@@ -96,7 +96,8 @@ export const useSpeechToText = (onRecorderStop?: (blob: Blob) => void) => {
   const downloadAsPdf = useCallback(async () => {
     if (!transcription) return;
     try {
-      const response = await fetch("http://localhost:8001/generate-pdf", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8001";
+      const response = await fetch(`${API_URL}/generate-pdf`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: transcription }),

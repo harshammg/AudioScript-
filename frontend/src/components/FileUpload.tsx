@@ -83,8 +83,9 @@ const FileUpload = ({ onTranscriptionComplete, externalFile }: FileUploadProps) 
         formData.append('file', file);
 
         try {
-            // Use port 8001 as configured
-            const response = await fetch('http://localhost:8001/transcribe', {
+            // Use configured API URL or default to localhost:8001
+            const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8001";
+            const response = await fetch(`${API_URL}/transcribe`, {
                 method: 'POST',
                 body: formData,
             });
