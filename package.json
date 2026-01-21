@@ -1,0 +1,10 @@
+{
+    "name": "audioscript-root",
+    "private": true,
+    "scripts": {
+        "build": "cd frontend && npm install && npm run build && cd .. && mkdir -p dist && cp -r frontend/dist/* dist/"
+    },
+    "engines": {
+        "node": "18.x"
+    }
+}
