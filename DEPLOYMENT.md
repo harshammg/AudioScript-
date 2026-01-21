@@ -48,3 +48,14 @@ It will show a URL like: `https://abcd-123-456.ngrok-free.app`
 6.  **Redeploy** your project (Deployment -> Redeploy).
 
 Now the Vercel site can talk to your computer securely! "Error Cleared".
+
+---
+
+## 📱 Sharing with Others (Other Devices)
+
+If you want **other people** (or your phone) to use the Vercel link:
+
+1.  **Your Computer Must Be On**: The website uses *your* computer's brain (backend) to process audio. If you turn off your computer or close the backend, the website stops working for everyone.
+2.  **Ngrok Must Be Running**: The `ngrok` terminal window must stay open.
+3.  **Same URL**: Once you set the `VITE_API_URL` in Vercel to your ngrok link, anyone in the world can open your Vercel website and it will connect to your computer to transcribe.
+
