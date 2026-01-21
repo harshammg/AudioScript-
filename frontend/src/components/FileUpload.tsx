@@ -102,7 +102,14 @@ const FileUpload = ({ onTranscriptionComplete, externalFile }: FileUploadProps) 
             setIsComplete(true);
 
         } catch (err: any) {
-            setError(err.message || 'An error occurred during transcription');
+            console.error("Transcription error:", err);
+            let errorMessage = err.message || 'An error occurred during transcription';
+
+            if (errorMessage.includes('Failed to fetch')) {
+                errorMessage = "Connection Failed. Only 'localhost' or HTTPS backends are supported by browsers. If you are on Vercel, you cannot connect to HTTP localhost.";
+            }
+
+            setError(errorMessage);
         } finally {
             setIsLoading(false);
         }

@@ -179,6 +179,19 @@ You can deploy the Frontend to [Vercel](https://vercel.com) easily:
 The backend utilizes `faster-whisper` and requires GPU/CPU resources and `ffmpeg`. It is **not recommended** to deploy this on serverless platforms like Vercel.
 Keep running the backend locally for usage.
 
+### 🌍 Connecting Vercel to Localhost
+
+If you deploy the frontend to Vercel, it will run on **HTTPS**. Your local backend runs on **HTTP**. Browsers block this connection (Mixed Content Error).
+
+**To make it work:**
+
+1.  **Option A (Easiest)**: Run the frontend locally (`npm run dev`) at `http://localhost:5173`.
+2.  **Option B (Advanced)**: Expose your local backend via HTTPS using **ngrok**:
+    *   Install ngrok.
+    *   Run `ngrok http 8001`.
+    *   Copy the `https://...` URL.
+    *   In Vercel Project Settings > Environment Variables, add: `VITE_API_URL` = `https://your-ngrok-url.ngrok-free.app`.
+
 ## 📄 License
 
 MIT License - You are free to use, modify, and distribute this software.
