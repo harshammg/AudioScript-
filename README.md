@@ -68,6 +68,26 @@ To run this app, you need to set up two things running at the same time: the Bac
 
 ---
 
+### 🤖 Quick Start for AI IDE Users
+
+If you're using an AI-powered IDE (like Cursor, Windsurf, GitHub Copilot, or similar), you can use this prompt to automatically set up and run the program:
+
+```
+Run the AudioScript program after downloading all the dependencies. 
+Install backend dependencies using Python 3.11-3.13 (create a virtual environment if needed), 
+install frontend dependencies with npm, then start both the backend and frontend servers.
+```
+
+The AI assistant will:
+1. Check your Python version and create a virtual environment if needed
+2. Install all backend dependencies (FastAPI, faster-whisper, etc.)
+3. Install all frontend dependencies (React, Vite, etc.)
+4. Start both servers automatically
+
+**Note**: Make sure you have the prerequisites installed (Node.js, Python 3.11-3.13, and FFmpeg) before using this prompt.
+
+---
+
 ### Step 1: Set up the Backend (The Brain)
 
 This runs the AI server.
