@@ -1,16 +1,24 @@
-# AudioScript 🎙️
+# AudioScript 🎙️ [Open Source]
 
-AudioScript is a powerful, privacy-first web application that turns your voice into text. Whether you want to transcribe a meeting, a lecture, or just your own thoughts, this tool processes everything purely on your computer—no data is ever sent to the cloud.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/frontend-React_18-61DAFB.svg?logo=react)
+![Vite](https://img.shields.io/badge/build-Vite-646CFF.svg?logo=vite)
+![Python](https://img.shields.io/badge/backend-Python_3.10-3776AB.svg?logo=python)
+![FastAPI](https://img.shields.io/badge/api-FastAPI-009688.svg?logo=fastapi)
 
-![AudioScript Screenshot](https://via.placeholder.com/800x400?text=AudioScript+Interface)
+**AudioScript** is a privacy-first web application that turns your voice into text. It processes audio **100% locally** on your device using OpenAI's Whisper technology—ensuring your data never leaves your computer.
 
-## 🌟 Why AudioScript?
+> **"Cloud UI, Local Privacy"**: The interface runs in the browser, but the brain runs on your machine.
 
--   **Privacy First**: Uses a local AI model (`faster-whisper`), so your audio never leaves your device.
--   **High Accuracy**: Leveraging OpenAI's Whisper technology for state-of-the-art transcription.
--   **User Control**: You record first, review, and *then* decide to transcribe.
--   **Rich Exports**: Save your work as PDF, Subtitles (SRT/VTT), or Text with timestamps.
--   **Modern Design**: Built with a beautiful, dark-themed interface that's easy on the eyes.
+---
+
+## 🌟 Key Features
+
+-   **🔒 Privacy First**: Audio processing happens on `localhost`. No data sent to the cloud.
+-   **⚡ Real-time Transcription**: Powered by `faster-whisper` and WebSockets.
+-   **🎯 High Accuracy**: Uses OpenAI's state-of-the-art Whisper models.
+-   **📄 Rich Exports**: Export to PDF, SRT, VTT, or Text with timestamps.
+-   **🎨 Modern UI**: Beautiful generic React + Shadcn UI interface.
 
 ---
 
